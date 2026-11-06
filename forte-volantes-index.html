@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090c11">
+  <meta name="description" content="Forte Volantes: serviços em airbags, volantes originais, revestimento de volantes em couro, tapeçaria e acessórios automotivos. Solicite um orçamento.">
+  <meta property="og:title" content="Forte Volantes | Tapeçaria e Acessórios Automotivos">
+  <meta property="og:description" content="Excelência em acabamento, conforto e segurança para o seu veículo.">
+  <meta property="og:type" content="website">
+  <title>Forte Volantes | Tapeçaria e Acessórios Automotivos</title>
+  <link rel="icon" href="logo-original.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================================================
+       CORES DA MARCA – personalize somente estas variáveis para mudar o tema.
+       ======================================================================== */
+    :root {
+      --fundo: #090c11;
+      --grafite: #171d24;
+      --laranja: #ff8c16;
+      --laranja-claro: #ffad52;
+      --texto: #fcfcff;
+      --cinza: #e2e4e8;
+      --borda: rgba(231, 239, 248, .62);
+      --vidro: rgba(19, 23, 29, .79);
+      --verde: #28ed17;
+      --vermelho: #ff5158;
+      --largura: 936px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 300px;
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: "Montserrat", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    /* ========================================================================
+       IMAGEM DO FUNDO
+       Troque "garagem.jpg" por outra fotografia, preservando as aspas.
+       O pacote já inclui uma imagem local inspirada na referência enviada.
+       ======================================================================== */
+    body::before {
+      content: "";
+      position: fixed;
+      z-index: -2;
+      inset: 0;
+      background: #090d13 url("garagem.jpg") center top / cover no-repeat;
+      pointer-events: none;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(4, 5, 8, .13), transparent 23%, transparent 77%, rgba(5, 6, 9, .16)),
+        linear-gradient(180deg, rgba(5, 7, 12, .16) 0%, rgba(6, 10, 15, .16) 38%, rgba(7, 10, 16, .56) 100%);
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #ffd2a1; outline-offset: 5px; }
+    .page {
+      width: min(calc(100% - 42px), var(--largura));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    .intro { text-align: center; }
+    .brand-logo {
+      width: min(100%, 625px);
+      height: auto;
+      display: block;
+      margin: 0 auto 26px;
+      filter: drop-shadow(0 5px 9px rgba(0,0,0,.55));
+    }
+    .intro h1 {
+      margin: 0 0 4px;
+      font-size: clamp(29px, 5vw, 49px);
+      line-height: 1.13;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -.045em;
+      text-shadow: 0 3px 12px rgba(0,0,0,.72);
+    }
+    .intro h1 span { color: var(--laranja); }
+    .intro .welcome {
+      margin: 0 auto;
+      max-width: 745px;
+      font-size: clamp(16px, 2.52vw, 25px);
+      line-height: 1.24;
+      font-style: italic;
+      font-weight: 500;
+      text-shadow: 0 3px 9px #000;
+    }
+    .slogan {
+      position: relative;
+      max-width: 650px;
+      margin: 21px auto 31px;
+      padding: 15px 27px 11px;
+      border-radius: 22px;
+      background: linear-gradient(180deg,rgba(16,17,19,.92),rgba(9,11,13,.58));
+      border-top: 1px solid rgba(255, 135, 20, .6);
+      border-bottom: 1px solid rgba(255, 133, 0, .26);
+      box-shadow: 0 -3px 22px rgba(255,123,13,.17), inset 0 1px 3px rgba(255,161,54,.13),0 12px 25px rgba(0,0,0,.28);
+      font-size: clamp(12px, 2vw, 20px);
+      font-weight: 700;
+      line-height: 1.42;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: .1em;
+      text-shadow: 0 2px 8px #000;
+    }
+    .slogan::before, .slogan::after {
+      content: "";
+      position: absolute;
+      top: 37%;
+      width: 10px;
+      height: 34px;
+      background: var(--laranja);
+      transform: skew(-27deg);
+      box-shadow: 0 0 12px rgba(255,135,17,.8);
+    }
+    .slogan::before { left: -8px; }
+    .slogan::after { right: -8px; }
+    .glass {
+      position: relative;
+      isolation: isolate;
+      background: linear-gradient(170deg, rgba(43,49,56,.76), rgba(17,20,25,.88) 50%, rgba(16,16,17,.85));
+      border: 1px solid var(--borda);
+      -webkit-backdrop-filter: blur(13px);
+      backdrop-filter: blur(13px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 15px 42px rgba(0,0,0,.45);
+    }
+    .services {
+      width: min(100%, 805px);
+      margin: 0 auto 31px;
+      padding: 16px 22px 24px;
+      border-radius: 35px;
+      overflow: hidden;
+    }
+    .services::after, .hours::after {
+      content: "";
+      position: absolute;
+      left: 13%; right: 13%; bottom: -1px;
+      height: 2px;
+      background: linear-gradient(90deg,transparent,var(--laranja),var(--laranja-claro),var(--laranja),transparent);
+      filter: drop-shadow(0 0 7px rgba(255,135,16,.95));
+    }
+    .services-heading {
+      display: flex;
+      gap: 23px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 19px;
+    }
+    .services-heading::before, .services-heading::after {
+      content: "";
+      flex: 1;
+      max-width: 133px;
+      height: 2px;
+      background: linear-gradient(90deg,transparent,var(--laranja));
+      box-shadow: 0 0 11px rgba(255,143,12,.4);
+    }
+    .services-heading::after { transform: rotate(180deg); }
+    .services-title-wrap { display:flex; gap:16px; align-items:center; white-space:nowrap; }
+    .services-heading h2 {
+      margin: 0;
+      color: #f7f7f9;
+      font-size: clamp(19px, 3.35vw, 31px);
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: -.028em;
+      text-shadow: 0 2px 7px #000;
+    }
+    .services-heading svg { width: 47px; height: 56px; color:var(--laranja); stroke:currentColor; stroke-width:2.1; fill:none; }
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .service {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      gap: 8px;
+      text-align: center;
+      padding: 1px 12px 0;
+    }
+    .service + .service { border-left: 1px solid rgba(231,232,235,.36); }
+    .service-ico { display:grid; place-items:center; width:64px; height:62px; color: var(--laranja); filter: drop-shadow(0 3px 3px rgba(0,0,0,.6)); }
+    .service-ico svg { width:57px; height:57px; display:block; }
+    .service p {
+      margin: 0;
+      font-size: clamp(11px, 1.75vw, 17px);
+      line-height: 1.19;
+      font-style: italic;
+      font-weight: 650;
+      text-shadow: 0 2px 6px #000;
+    }
+    .links {
+      width: min(100%, 790px);
+      display: grid;
+      gap: 19px;
+      margin: 0 auto 34px;
+    }
+    .action {
+      position: relative;
+      min-height: 115px;
+      display: grid;
+      grid-template-columns: 100px 2px minmax(0,1fr) 33px;
+      align-items: center;
+      column-gap: 27px;
+      overflow: hidden;
+      padding: 15px 30px 17px 22px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-bottom: 3px solid var(--laranja);
+      border-radius: 33px;
+      color:var(--texto);
+      background: linear-gradient(165deg, rgba(49,54,58,.86),rgba(22,24,27,.92) 48%, rgba(10,11,12,.94));
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 11px 25px rgba(0,0,0,.4), inset 0 2px 0 rgba(255,255,255,.12), 0 2px 11px rgba(255,130,15,.20);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .22s ease,border-color .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+    .action::after {
+      content: "";
+      position: absolute;
+      left: 20%; right: 20%; bottom: 0;
+      height: 2px;
+      background: linear-gradient(90deg,transparent,var(--laranja-claro),transparent);
+      box-shadow:0 0 12px var(--laranja);
+      pointer-events: none;
+    }
+    .action:hover { transform: translateY(-4px) scale(1.008); border-color:rgba(255,183,105,.94); box-shadow:0 18px 34px rgba(0,0,0,.5),0 0 22px rgba(255,132,19,.31); }
+    .action:active { transform: translateY(-1px); }
+    .action-logo { display:grid; place-items:center; width:92px; height:77px; }
+    .action-logo svg { width:75px; height:75px; filter:drop-shadow(0 3px 2px #000); }
+    .action-divider { display:block; align-self:stretch; width:2px; height:80%; margin:auto; background:linear-gradient(transparent,var(--laranja) 20%,var(--laranja) 80%,transparent); box-shadow:0 0 7px rgba(255,150,26,.47); }
+    .action-copy { min-width:0; }
+    .action-copy strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: clamp(17px, 2.68vw, 29px);
+      line-height: 1.16;
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      text-shadow: 0 3px 7px rgba(0,0,0,.6);
+    }
+    .action-copy small {
+      display:block;
+      font-size: clamp(12px, 2.09vw, 21px);
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.2;
+      text-shadow: 0 2px 6px #000;
+    }
+    .action-arrow { width:30px; height:30px; color:#fff; filter: drop-shadow(0 2px 3px #000); transition:transform .25s ease; }
+    .action:hover .action-arrow { transform:translateX(4px); }
+    .instagram-logo {
+      display:grid; place-items:center; width:74px; height:74px;
+      border-radius:20px;
+      background: radial-gradient(circle at 28% 105%,#ffd560 0%,#ffbe42 12%,#fe3e30 43%,#c319a3 64%,#5c38d8 100%);
+      box-shadow:inset 0 1px 3px rgba(255,255,255,.35),0 4px 6px #000;
+    }
+    .instagram-logo svg { width:56px; height:56px; filter:none; }
+    .google-g { font-family:Arial,sans-serif; font-size:82px; font-weight:900; line-height:1; font-style:normal; background:conic-gradient(#4285f4 0deg 70deg,#34a853 70deg 145deg,#fbbc05 145deg 210deg,#ea4335 210deg 300deg,#4285f4 300deg); color:transparent; -webkit-background-clip:text; background-clip:text; text-shadow:none; }
+    .reviews-head { display:flex; align-items:center; gap:20px; }
+    .stars { flex:0 0 auto; color:#ffbf00; letter-spacing:-.12em; font-size:30px; line-height:1; font-style:normal; white-space:nowrap; }
+    .reviews-head strong { margin:0; }
+    .review-subtitle { text-align:center; }
+    .hours {
+      display:grid;
+      grid-template-columns:90px minmax(0,1fr) 325px;
+      align-items:center;
+      min-height:170px;
+      padding:20px 29px;
+      border-radius:37px;
+      overflow:hidden;
+    }
+    .hours-icon {display:grid; place-items:center; height:110px; color:var(--laranja); border-right:2px solid var(--laranja);}
+    .hours-icon svg {width:61px;height:61px;filter:drop-shadow(0 3px 3px #000);}
+    .hours-copy { padding:0 26px; }
+    .hours-copy h2 {margin:0 0 12px; font-size:clamp(18px,2.52vw,25px); font-weight:900; font-style:italic; letter-spacing:-.03em; white-space:nowrap; text-shadow:0 3px 5px #000;}
+    .hours-row { display:flex; gap:16px; align-items:center; margin:7px 0; font-size:clamp(14px,1.95vw,20px); font-weight:500; white-space:nowrap; }
+    .calendar-icon { width:27px; height:27px; color:var(--laranja); flex:none; }
+    .status-zone { height:100%; display:flex; align-items:center; justify-content:center; border-left:2px solid var(--laranja); padding-left:22px; }
+    .status {
+      display:inline-flex;
+      min-height:67px;
+      min-width:270px;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      border-radius:999px;
+      border:2px solid var(--vermelho);
+      padding:10px 19px;
+      background:linear-gradient(180deg,rgba(95,7,13,.98),rgba(27,8,11,.98));
+      color:#fff;
+      font-family:"Montserrat",Arial,sans-serif;
+      font-size:25px;
+      font-weight:900;
+      letter-spacing:-.065em;
+      white-space:nowrap;
+      box-shadow:0 0 14px rgba(255,44,45,.35),inset 0 3px 5px rgba(255,255,255,.12);
+    }
+    .status .dot { width:25px; height:25px; border-radius:50%; background:var(--vermelho); box-shadow:0 0 15px var(--vermelho); flex:none; }
+    .status.open { border-color:var(--verde); background:linear-gradient(180deg,#126b12,#06330a 66%,#041b06); box-shadow:0 0 13px rgba(34,237,22,.4),inset 0 3px 5px rgba(255,255,255,.13); }
+    .status.open .dot {background:var(--verde);box-shadow:0 0 15px var(--verde);}
+    .footer-note { text-align:center; font-size:12px; color:#b9c0c8; text-shadow:0 1px 3px #000; margin:20px 0 0; line-height:1.6; }
+    .toast { position:fixed; z-index:4; bottom:18px; left:50%; transform:translate(-50%, 20px); opacity:0; visibility:hidden; width:min(90%,460px); border:1px solid rgba(255,156,59,.75); padding:15px 17px; border-radius:14px; background:rgba(10,13,17,.96); color:#fff; text-align:center; font-size:13px; line-height:1.5; box-shadow:0 10px 35px #000; transition:.2s ease; }
+    .toast.show { opacity:1; visibility:visible; transform:translate(-50%,0); }
+    @media (min-width: 1000px) { body::before { background-size:100% auto; } }
+    @media (max-width:850px) {
+      .page { width:min(calc(100% - 32px), 770px); padding-top:35px; }
+      .services { padding-left:14px; padding-right:14px; }
+      .service { padding-left:6px;padding-right:6px; }
+      .service-ico { width:51px;height:52px; }.service-ico svg{width:49px;height:49px;}
+      .action { grid-template-columns:80px 2px minmax(0,1fr) 27px; gap:19px; min-height:95px; border-radius:27px; padding:12px 18px; }
+      .action-logo { width:72px;height:68px; }.action-logo svg{width:67px;height:67px;}
+      .instagram-logo{width:64px;height:64px;border-radius:17px;}.instagram-logo svg{width:51px;height:51px;}
+      .google-g{font-size:71px;}.stars{font-size:23px;}.reviews-head{gap:12px;}
+      .hours { grid-template-columns:67px 1fr; gap:0; }
+      .hours-icon { height:100px; }.hours-icon svg{width:48px;height:48px;}
+      .hours-copy {padding:0 19px;}
+      .status-zone { grid-column:1/-1; margin-top:20px; padding:18px 0 0; border-left:0; border-top:1px solid rgba(255,140,15,.6); }
+    }
+    @media (max-width:620px) {
+      body::before { background-size:100% auto; background-color:#0b0e15; }
+      .page {width:min(calc(100% - 26px), 520px);padding:25px 0 34px;}
+      .brand-logo{width:min(100%,375px);margin-bottom:25px;}
+      .intro h1{font-size:clamp(26px,6.35vw,34px);margin:0 0 8px;letter-spacing:-.055em;}
+      .intro .welcome{font-size:clamp(13px,3.9vw,17px);line-height:1.4;max-width:450px;}
+      .slogan{ margin:22px auto 25px; font-size:11px; line-height:1.4; padding:13px 23px 11px;letter-spacing:.06em; max-width:430px;}
+      .slogan::before,.slogan::after{width:7px;height:26px;}
+      .services{border-radius:24px;padding:16px 12px 19px;margin-bottom:22px;}
+      .services-heading{gap:8px;margin-bottom:10px;}
+      .services-heading::before,.services-heading::after{max-width:32px;}
+      .services-title-wrap{gap:8px;}
+      .services-heading svg{width:31px;height:38px;}
+      .services-heading h2{font-size:clamp(18px,5vw,25px);}
+      .services-list{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px;}
+      .service{gap:7px;min-height:105px;padding:8px 6px;}
+      .service + .service{border-left:0;}
+      .service:nth-child(even){border-left:1px solid rgba(233,235,239,.2);}
+      .service:nth-child(n+3){border-top:1px solid rgba(233,235,239,.13);padding-top:14px;}
+      .service:last-child {grid-column:1/-1;border-left:0;min-height:auto;flex-direction:row;justify-content:center;gap:16px;}
+      .service-ico{width:45px;height:45px;}.service-ico svg{width:44px;height:44px;}
+      .service p{font-size:clamp(12px,3.4vw,15px);}
+      .links{gap:12px;margin-bottom:22px;}
+      .action{min-height:87px;grid-template-columns:57px 2px minmax(0,1fr) 18px;column-gap:12px;padding:10px 12px 10px 10px;border-radius:22px;}
+      .action-logo{width:57px;height:56px;}.action-logo svg{width:53px;height:53px;}
+      .instagram-logo{width:49px;height:49px;border-radius:14px;}.instagram-logo svg{width:40px;height:40px;}
+      .google-g{font-size:55px;}.action-arrow{width:18px;height:18px;}
+      .action-copy strong{font-size:clamp(13px,3.65vw,19px);margin-bottom:5px;letter-spacing:-.045em;}
+      .action-copy small{font-size:clamp(10.5px,2.65vw,14px);line-height:1.35;}
+      .reviews-head{display:block;}.stars{display:block;font-size:16px;line-height:1.05;letter-spacing:-.08em;margin-bottom:2px;}.review-subtitle{text-align:left;}
+      .hours{padding:18px 15px;border-radius:25px;grid-template-columns:52px 1fr;min-height:auto;}
+      .hours-icon{height:90px;}.hours-icon svg{width:38px;height:38px;}
+      .hours-copy{padding:0 0 0 15px;}.hours-copy h2{font-size:clamp(15px,4vw,21px);white-space:normal;margin-bottom:8px;}
+      .hours-row{font-size:clamp(11px,2.95vw,16px);gap:9px;margin:6px 0;white-space:normal;}
+      .calendar-icon{width:20px;height:20px;}
+      .status-zone{padding-top:15px;margin-top:16px;}.status{min-width:0;min-height:49px;font-size:17px;gap:10px;padding:8px 24px;}.status .dot{width:16px;height:16px;}
+      .footer-note{font-size:10.5px;padding:0 15px;}
+    }
+    @media (max-width:355px) {
+      .page{width:calc(100% - 20px);}
+      .action{grid-template-columns:48px 2px minmax(0,1fr) 16px;column-gap:9px;}
+      .action-logo,.action-logo svg{width:45px;height:45px;}.instagram-logo{width:44px;height:44px;}.instagram-logo svg{width:35px;height:35px;}.google-g{font-size:48px;}
+      .action-copy strong{font-size:12px;}.action-copy small{font-size:10px;}
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after {transition:none!important;scroll-behavior:auto!important;animation:none!important;}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <!-- LOGOMARCA: substitua o caminho por sua imagem, se desejar.
+           O arquivo logo-marca.png acompanha a página. -->
+      <img class="brand-logo" src="logo-marca.png" width="622" height="105" alt="Forte Volantes — Tapeçaria e Acessórios Automotivos">
+      <h1>Bem-vindo à <span>Forte Volantes!</span></h1>
+      <p class="welcome">Excelência em acabamento, conforto e segurança<br class="large-break"> para o seu veículo.</p>
+      <p class="slogan">Qualidade e segurança em cada detalhe<br class="large-break"> do seu automóvel.</p>
+    </header>
+
+    <section class="services glass" aria-labelledby="servicos-titulo">
+      <div class="services-heading">
+        <div class="services-title-wrap">
+          <svg viewBox="0 0 48 57" aria-hidden="true"><rect x="15" y="3" width="18" height="11" rx="3"/><rect x="11" y="19" width="26" height="19" rx="6"/><path d="M11 28H7v13c0 4 3 7 7 7h20c4 0 7-3 7-7V28h-4M11 40h26M14 49v5M34 49v5"/></svg>
+          <h2 id="servicos-titulo">Nossos serviços</h2>
+        </div>
+      </div>
+      <ul class="services-list">
+        <li class="service">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 60 60"><defs><linearGradient id="airg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9ec"/><stop offset="1" stop-color="#ff9226"/></linearGradient></defs><circle cx="19" cy="18" r="12" fill="url(#airg)"/><circle cx="44" cy="20" r="8.5" fill="#ffad53"/><path d="M8 52 21 34l11 12M29 32l8 10M38 40l12-12" stroke="#ff951f" stroke-width="6" stroke-linecap="round" fill="none"/></svg></div>
+          <p>Mão de obra<br>de Airbag</p>
+        </li>
+        <li class="service">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="4.4"><circle cx="30" cy="30" r="25"/><circle cx="30" cy="31" r="5" fill="currentColor" stroke="none"/><path d="M7 26c15-1 27 0 46 0M30 31v23M11 30l15 1M34 31l15-1" stroke-linecap="round"/></svg></div>
+          <p>Troca de<br>volantes<br>originais</p>
+        </li>
+        <li class="service">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none"><path d="M13 9Q30 18 47 9L51 23Q42 31 51 42L40 51Q30 44 20 51L9 42Q18 31 9 23Z" stroke="currentColor" stroke-width="3" stroke-dasharray="3 2"/><path d="M16 15Q30 22 44 15L46 24Q39 31 46 41L39 45Q30 40 21 45L14 41Q21 31 14 24Z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <p>Revestimento<br>de volantes<br>em couro</p>
+        </li>
+        <li class="service">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8h21l7 18-4 14H19l-7-9 3-16z"/><path d="M14 36H7c-3 0-4 3-4 6v7h47l4-9H15"/><path d="M16 51v5M47 51v5M20 13h18"/></svg></div>
+          <p>Tapeçaria<br>em geral</p>
+        </li>
+        <li class="service">
+          <div class="service-ico" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M25 5h10l2 7 6 3 7-3 6 9-6 5v8l6 5-6 9-7-3-6 3-2 7H25l-2-7-6-3-7 3-6-9 6-5v-8l-6-5 6-9 7 3 6-3z"/><circle cx="30" cy="30" r="9"/></svg></div>
+          <p>Acessórios<br>automotivos</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="links" aria-label="Contato e redes sociais">
+      <a class="action" id="btn-willian" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar com o vendedor Willian pelo WhatsApp">
+        <span class="action-logo" aria-hidden="true"><svg viewBox="0 0 74 74" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="wag" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4fff45"/><stop offset=".63" stop-color="#07a509"/><stop offset="1" stop-color="#006d06"/></linearGradient></defs><path d="M17 55 8 66l3-20a31 31 0 1 1 12 13Z" fill="white"/><circle cx="38" cy="33" r="27.5" fill="url(#wag)" stroke="white" stroke-width="4"/><path d="M26 19c-3.5 0-6 4-5 9 1.8 11 12 22 23 22 6 0 10-3 10-7v-2l-12-5-5 5c-7-2-10-6-13-12l4-4-5-11Z" fill="#fff" transform="translate(1 2) scale(.86)"/></svg></span>
+        <span class="action-divider" aria-hidden="true"></span>
+        <span class="action-copy"><strong>WhatsApp - Vendedor Willian</strong><small>Fale agora e solicite um orçamento!</small></span>
+        <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3 9 9-9 9"/></svg>
+      </a>
+      <a class="action" id="btn-danylo" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar com o vendedor Danylo pelo WhatsApp">
+        <span class="action-logo" aria-hidden="true"><svg viewBox="0 0 74 74" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="wag2" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4fff45"/><stop offset=".63" stop-color="#07a509"/><stop offset="1" stop-color="#006d06"/></linearGradient></defs><path d="M17 55 8 66l3-20a31 31 0 1 1 12 13Z" fill="white"/><circle cx="38" cy="33" r="27.5" fill="url(#wag2)" stroke="white" stroke-width="4"/><path d="M26 19c-3.5 0-6 4-5 9 1.8 11 12 22 23 22 6 0 10-3 10-7v-2l-12-5-5 5c-7-2-10-6-13-12l4-4-5-11Z" fill="#fff" transform="translate(1 2) scale(.86)"/></svg></span>
+        <span class="action-divider" aria-hidden="true"></span>
+        <span class="action-copy"><strong>WhatsApp - Vendedor Danylo</strong><small>Tire suas dúvidas e agende seu serviço!</small></span>
+        <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3 9 9-9 9"/></svg>
+      </a>
+      <a class="action" id="btn-instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram da Forte Volantes">
+        <span class="action-logo" aria-hidden="true"><span class="instagram-logo"><svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="5.5"><rect x="9" y="9" width="42" height="42" rx="12"/><circle cx="30" cy="30" r="10.5"/><circle cx="43.5" cy="16.5" r="2" fill="#fff" stroke="none"/></svg></span></span>
+        <span class="action-divider" aria-hidden="true"></span>
+        <span class="action-copy"><strong>Instagram</strong><small>Acompanhe nossos serviços e novidades!</small></span>
+        <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3 9 9-9 9"/></svg>
+      </a>
+      <a class="action" id="btn-avaliacoes" href="#" target="_blank" rel="noopener noreferrer" aria-label="Avaliar a Forte Volantes no Google">
+        <span class="action-logo" aria-hidden="true"><span class="google-g">G</span></span>
+        <span class="action-divider" aria-hidden="true"></span>
+        <span class="action-copy"><span class="reviews-head"><span class="stars" aria-hidden="true">★★★★★</span><strong>Avalie nossa loja</strong></span><small class="review-subtitle">Sua opinião é muito importante!</small></span>
+        <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3 9 9-9 9"/></svg>
+      </a>
+    </nav>
+
+    <section class="hours glass" aria-label="Horário de funcionamento">
+      <div class="hours-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><circle cx="32" cy="32" r="27"/><path d="M32 15v19l11 10"/></svg></div>
+      <div class="hours-copy">
+        <h2>Horário de Funcionamento</h2>
+        <!-- HORÁRIOS EXIBIDOS - se alterar, atualize também HORARIOS no JavaScript -->
+        <div class="hours-row"><svg class="calendar-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h2m4 0h2m-8 4h2m4 0h2"/></svg><span>Seg a Sex: 08:00 às 18:00</span></div>
+        <div class="hours-row"><svg class="calendar-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h2m4 0h2m-8 4h2m4 0h2"/></svg><span>Sáb: Fechado</span></div>
+      </div>
+      <div class="status-zone"><span class="status" id="status-loja" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="status-texto">Consultando...</span></span></div>
+    </section>
+    <p class="footer-note">*Status baseado no horário de Brasília/Goiás. Feriados e horários excepcionais podem variar.</p>
+  </main>
+
+  <div id="aviso-link" role="alert" class="toast" aria-live="assertive"></div>
+  <script>
+    "use strict";
+
+    /* ========================================================================
+       EDITE AQUI OS QUATRO LINKS REAIS DA LOJA.
+
+       WhatsApp: https://wa.me/55DDDNUMERO
+       Exemplo somente do FORMATO: https://wa.me/5562999999999
+       (não utilize esse número fictício sem substituir).
+       Instagram: https://www.instagram.com/perfil_da_loja/
+       Avaliações: cole o link direto "Pedir avaliações" do Google.
+
+       Se algum link continuar vazio, será exibido um aviso ao clicar.
+       ======================================================================== */
+    const LINKS = {
+      willian: "https://wa.me/556434033927",     // WhatsApp do vendedor Willian
+      danylo: "https://wa.me/556492675892",      // WhatsApp do vendedor Danylo (conferir número)
+      instagram: "https://www.instagram.com/fortevolantes/",   // Instagram da Forte Volantes
+      avaliacoes: "https://www.google.com/search?q=forte+volantes&oq=forte+volantes&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIQCAEQLhivARjHARiABBiOBTIICAIQABgWGB4yBggDEEUYPDIGCAQQRRg90gEIMjU4MmowajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8"   // Google: link de pesquisa fornecido
+    };
+
+    const DESTINOS = {
+      willian: document.getElementById("btn-willian"),
+      danylo: document.getElementById("btn-danylo"),
+      instagram: document.getElementById("btn-instagram"),
+      avaliacoes: document.getElementById("btn-avaliacoes")
+    };
+    const aviso = document.getElementById("aviso-link");
+    let avisoTimer;
+
+    function mostrarAviso(texto) {
+      aviso.textContent = texto;
+      aviso.classList.add("show");
+      clearTimeout(avisoTimer);
+      avisoTimer = setTimeout(() => aviso.classList.remove("show"), 4500);
+    }
+
+    for (const [chave, botao] of Object.entries(DESTINOS)) {
+      const texto = String(LINKS[chave] || "").trim();
+      let valido = false;
+      try {
+        const url = new URL(texto);
+        valido = url.protocol === "https:" || url.protocol === "http:";
+      } catch (_) { /* Campo vazio ou endereço inválido */ }
+      if (valido) {
+        botao.href = texto;
+      } else {
+        botao.removeAttribute("href");
+        botao.removeAttribute("target");
+        botao.setAttribute("role", "button");
+        botao.addEventListener("click", (evento) => {
+          evento.preventDefault();
+          mostrarAviso("Este link ainda não foi configurado. Edite a seção LINKS no fim do arquivo index.html.");
+        });
+        botao.addEventListener("keydown", (evento) => {
+          if (evento.key === "Enter" || evento.key === " ") {
+            evento.preventDefault();
+            mostrarAviso("Este link ainda não foi configurado. Edite a seção LINKS no fim do arquivo index.html.");
+          }
+        });
+        botao.tabIndex = 0;
+      }
+    }
+
+    /* ========================================================================
+       HORÁRIO DINÂMICO: usa a data/hora atual do dispositivo e interpreta no
+       fuso da loja (Goiás/Brasília), não no fuso dos visitantes de outros estados.
+       De segunda a sexta: 08:00–18:00, sábado e domingo fechados.
+       Se horários mudarem, altere abaixo e as linhas HTML acima.
+       ======================================================================== */
+    const FUSO_DA_LOJA = "America/Sao_Paulo";
+    const HORARIOS = {
+      Mon: ["08:00", "18:00"],
+      Tue: ["08:00", "18:00"],
+      Wed: ["08:00", "18:00"],
+      Thu: ["08:00", "18:00"],
+      Fri: ["08:00", "18:00"]
+      // Sábado e domingo não listados = fechado.
+    };
+
+    function minutos(horario) {
+      const [h, m] = horario.split(":").map(Number);
+      return h * 60 + m;
+    }
+    function estaAberto() {
+      const partes = new Intl.DateTimeFormat("en-US", {
+        timeZone: FUSO_DA_LOJA,
+        weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+      }).formatToParts(new Date());
+      const pegar = (tipo) => partes.find(parte => parte.type === tipo)?.value;
+      const agenda = HORARIOS[pegar("weekday")];
+      if (!agenda) return false;
+      const agora = Number(pegar("hour")) * 60 + Number(pegar("minute"));
+      return agora >= minutos(agenda[0]) && agora < minutos(agenda[1]);
+    }
+    function atualizarStatus() {
+      const aberto = estaAberto();
+      document.getElementById("status-loja").classList.toggle("open", aberto);
+      document.getElementById("status-texto").textContent = aberto ? "Aberto Agora" : "Fechado no Momento";
+    }
+    atualizarStatus();
+    setInterval(atualizarStatus, 30000);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) atualizarStatus();
+    });
+  </script>
+</body>
+</html>

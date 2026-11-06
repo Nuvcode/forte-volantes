@@ -1,0 +1,23 @@
+FORTE VOLANTES — PÁGINA DE LINKS
+================================
+
+1. Abra o arquivo index.html no VS Code.
+2. Próximo ao final do arquivo, localize: const LINKS = { ... }
+3. Preencha os quatro endereços reais de WhatsApp, Instagram e Google.
+4. Para alterar horários, edite as linhas de horário no HTML e o objeto HORARIOS no JavaScript.
+5. Para alterar cores, edite as variáveis CSS em :root, no início do arquivo.
+6. Para trocar a foto de fundo, substitua garagem.jpg ou altere o nome no CSS.
+7. Para trocar a logomarca, substitua logo-marca.png ou altere o src da imagem.
+
+PARA PUBLICAR NO GITHUB PAGES:
+- Coloque na raiz do repositório: index.html, garagem.jpg, logo-marca.png e logo-original.jpg.
+- Em Settings > Pages, escolha Deploy from a branch > main > /(root).
+- NÃO envie apenas o HTML; as imagens são arquivos separados.
+
+O site não foi publicado automaticamente. Os links estão vazios por segurança,
+para não direcionar clientes a números ou perfis desconhecidos.
+
+O indicador de aberto/fechado usa o fuso America/Sao_Paulo (Goiás/Brasília).
+Feriados e horários excepcionais devem ser administrados separadamente.
+
+Elementos da página são HTML/CSS de verdade, e não um screenshot com botões falsos.
